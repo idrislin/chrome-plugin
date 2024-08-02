@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Develop Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="block_box">
+    <!-- <p class="title">时间戳转换</p> -->
+    <div class="inline_box">
+      <p style="white-space: nowrap;">Now:</p>
+      <p id="timestamp_display" class="time_display"></p>
+      <button id="timer_controll_button" class="outlined_button">stop</button>
+    </div>
+    <div class="convert_timestamp_box">
+      <input id="timestamp_input" type="text" name="timestamp" placeholder="Enter"></input>
+      <select id="convert_timestamp_select" name="timestamp_unit">
+        <option value="ms">ms</option>
+        <option value="s">s</option>
+      </select>
+      <button id="convert_timestamp_button" class="outlined_button">convert</button>
+    </div>
+    <p id="time_display"></p>
+    <div class="convert_timestamp_box">
+      <input id="time_input" type="text" name="time" placeholder="yyyy/MM/dd HH:mm:ss"></input>
+      <select id="convert_time_select" name="time_unit">
+        <option value="ms">ms</option>
+        <option value="s">s</option>
+      </select>
+      <button id="convert_time_button" class="outlined_button">convert</button>
+    </div>
+    <p id="timestamp2_display"></p>
+  </div>
+  <script src="popup.js"></script>
+
+</body>
+
+</html>

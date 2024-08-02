@@ -1,0 +1,96 @@
+/* Optional: add any custom styles here */
+:root {
+  --primary-color: #2dc08d;
+  --primary-color-hover: #26a378;
+  --border-color: #00c091;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+body {
+  padding: 10px;
+  font-size: 14px;
+  width: min-content;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.block_box {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inline_box {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.time_display {
+  color: var(--primary-color);
+}
+
+.time_controll_button {
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.time_controll_button:hover {
+  text-decoration: underline;
+}
+
+.convert_timestamp_box {
+  gap: 8px;
+  display: flex;
+  white-space: nowrap;
+}
+
+.outlined_button {
+  padding: 4px 12px;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  color: var(--border-color);
+  transition: color 0.2s ease-out, background-color 0.2s ease-out,
+    opacity 0.2s ease-out, border-color 0.2s ease-out;
+  will-change: opacity;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  user-select: none;
+}
+
+.outlined_button:hover {
+  background-color: #fff;
+  border-color: #384347;
+  color: #384347;
+}
+
+input,
+select {
+  border-radius: 2px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
