@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isNaN(timestamp)) {
       const date = new Date(timestamp);
-      timeDisplayEle.innerText = date.toLocaleString();
+      timeDisplayEle.innerText = "Result: " + date.toLocaleString();
     } else {
-      timeDisplayEle.innerText = "Invalid timestamp";
+      timeDisplayEle.innerText = "Result: " + "Invalid timestamp";
     }
   });
 
@@ -40,9 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const unit = document.getElementById("convert_time_select").value;
     const date = new Date(inputValue);
     if (unit === "s") {
-      timestampDisplayEle.innerText = Math.floor(date.getTime() / 1000);
+      timestampDisplayEle.innerText =
+        "Result: " + Math.floor(date.getTime() / 1000);
     } else if (unit === "ms") {
-      timestampDisplayEle.innerText = date.getTime();
+      timestampDisplayEle.innerText = "Result: " + date.getTime();
     }
   });
 
@@ -66,4 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateTimestamp();
   intervalId = setInterval(updateTimestamp, 1000);
+
+  console.log("create a div");
+  tooltip = document.createElement("div");
+  tooltip.id = "color-tooltip";
+  tooltip.style.position = "absolute";
+  tooltip.style.padding = "5px";
+  tooltip.style.backgroundColor = "#ffffff";
+  tooltip.style.border = "1px solid #000000";
+  tooltip.style.borderRadius = "5px";
+  //   tooltip.style.boxShadow = "0 0 5px rgba(0,0,0,0.3)";
+  tooltip.style.zIndex = "10000";
+  tooltip.style.pointerEvents = "none";
+  tooltip.style.display = "none";
+  document.body.appendChild(tooltip);
 });

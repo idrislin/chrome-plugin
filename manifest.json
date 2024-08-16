@@ -3,7 +3,10 @@
   "name": "develop-tools",
   "version": "1.0",
   "description": "",
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -11,5 +14,11 @@
       "48": "images/icon16.png",
       "128": "images/icon16.png"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
